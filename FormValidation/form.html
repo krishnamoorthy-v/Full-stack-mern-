@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Validation
+            
+        </title>
+        <link rel="icon" href="./logo.jpeg">
+    </head>
+    <body>
+        <link rel="stylesheet" href="./style.css">
+        <script src="validation.js"></script>
+        <form onsubmit="validate()">
+            <table>
+                <tr>
+
+                    <td>
+                        <label for="name">Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="name">
+                        
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td id="nameerr" class="view"></td>
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <label for="dob">DOB:</label>
+                    </td>
+                    <td>
+                        <input type="date" id="dob">
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="doberr" class="view"></td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label>Gender:</label>
+                    </td>
+                    <td>
+                       <input type="radio" id="male" value="male"> 
+                       <label for="male">Male</label>
+                    
+                        <input type="radio" id="female" value="female">
+                        <label for="female">Female</label>
+                    </td>
+                   
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td id="gendererr" class="view"></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="degree">Qualification:</label>
+                    </td>
+                    <td>
+                        <select id="degree">
+                            <option value="option">option</option>
+                            <option value="Mca">MCA</option>
+                            <option value="BSC">BSC</option>
+                            <option value="BCA">BCA</option>
+                        </select>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="degeerr" class="view"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email:</label>
+                    </td>
+                    <td>
+                        <input  type="email" id="email">
+                    </td>
+                   
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="emailerr" class="view"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Password:</label>
+                    </td>
+                    <td>
+                        <input type="password" id="password">
+                    </td>
+                  
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="passworderr" class="view"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" id="submit" value="submit">
+                    </td>
+                    
+                </tr>
+                
+            </table>
+        </form>
+    </body>
+</html>

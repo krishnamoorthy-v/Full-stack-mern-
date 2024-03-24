@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            DataBase
+        </title>
+        <link rel="stylesheet" href="style2.css">
+    </head>
+    <body>
+        <div id="container">
+            <div class="row">
+                <p>Id</p>
+                <p>Name</p>
+                <p>Exam</p>
+                <p>Math</p>
+                <p>Physics</p>
+                <p>Chemistry</p>
+                <p>Edit</p>
+                <p>Delete</p>
+                <form action="/" method="get"><input type="submit" value="add"></form>
+            </div>
+            <% data2.forEach( (item)=>{ %>
+            
+            <div class="row">
+                    <p>
+                        <%= item.id %>
+                    </p>
+                    <p> 
+                        <%= item.name %>
+                    </p>
+
+                    <p> 
+                        <%= item.exam %>
+                    </p>
+
+                    <p>
+                        <%=item.math %>
+                    </p>
+
+                    <p>
+                        <%= item.physics %>
+                    </p>
+
+                    <p>
+                        <%= item.chemistry %>
+                    </p>
+
+                    
+                        <form action="\edit\<%= item.id %>" method="POST"> <input type="submit" value="Edit"></form>
+                   
+
+                    
+                        <form action="\delete\<%= item.id %>" method="POST"> <input type="submit" value="Delete"></form>
+                    
+                   
+            </div>
+            <% }); %>
+            
+        </div>
+    </body>
+</html>

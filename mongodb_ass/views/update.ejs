@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Input Form
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form action="/update/<%= id %>" method="post">
+            <div class="container">
+                <input name="id" id = "id" type="text"  value = "<%= id %>" disabled>
+            </div>
+            <div class="container">
+                <input type="text" id="name" name="name" placeholder="Enter the name">
+            </div>
+            <div class="container" >
+                <select id="exam" name="exam">
+                    <option value="internal 1">internal 1</option>
+                    <option value="internal 2">internal 2</option>
+                    <option value="internal 3">internal 3</option>
+                </select>
+            </div>
+            <div class="container">
+                <input type="number" id="math" name="math" placeholder="Math mark">
+            </div>
+            <div class="container">
+                <input type="number" id="physics" name="physics" placeholder="Physics mark">
+            </div>
+            <div class="container">
+                <input type="number" id="chemistry" name="chemistry" placeholder="Chemistry mark">
+            </div>
+            <div class="container">
+                <input type="submit" id="submit" value="update">
+            </div>
+
+
+
+
+        </form>
+    </body>
+</html>

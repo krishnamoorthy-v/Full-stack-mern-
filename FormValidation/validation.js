@@ -1,8 +1,12 @@
 
 
 function validate(){
-    event.preventDefault()
-  
+    // event.preventDefault()
+    let errorMessage = document.getElementsByClassName("error")
+    for(let i =0; i<errorMessage.length; i++)
+    {
+        errorMessage[i].innerHTML = ""
+    }
     let name = document.getElementById("name").value 
     let dob = document.getElementById("dob").value
     let email = document.getElementById("email").value
@@ -21,15 +25,15 @@ function validate(){
     parse.innerHTML = "Name field is required"
 
     document.getElementById("nameerr").appendChild(parse)
+    return false
    
     }
 
     else if(checkDOB(dob) == false)
     {
-        const parse = document.createElement("p")
-        parse.innerHTML = "DOB field data is invallid"
 
-        document.getElementById("doberr").appendChild(parse)
+        document.getElementById("doberr").innerHTML = "DOB field data is invallid"
+        return false
     }
 
     else if(gender(male, female) == false)
@@ -39,6 +43,7 @@ function validate(){
         parse.innerHTML = "Gender field data is not selected"
     
         document.getElementById("gendererr").appendChild(parse)
+        return false
        
     }
     else if(checkDegree(degree) == false)
@@ -48,6 +53,7 @@ function validate(){
         parse.innerHTML = "Degree field option is not selected."
 
         document.getElementById("degeerr").appendChild(parse)
+        return false
        
     }
 
@@ -58,7 +64,7 @@ function validate(){
         parse.innerHTML = "Email field data is invalid"
   
         document.getElementById("emailerr").appendChild(parse)
-       
+       return false
     }
     else if(checkPassword(password) == false)
     {
@@ -67,6 +73,7 @@ function validate(){
         parse.innerHTML = "Password length must be greater than or equal to the 6."
    
         document.getElementById("passworderr").appendChild(parse)
+        return false
        
     }
     

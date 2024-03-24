@@ -1,0 +1,44 @@
+html{
+    width: 100%;
+    height: 100%
+}
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+form {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 25px;
+
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+
+}
+
+#submit {
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+}
+
+#submit:hover {
+    border-radius: 10px;
+    background-color: white;
+    color: green
+}

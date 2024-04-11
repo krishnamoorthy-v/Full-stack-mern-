@@ -7,7 +7,7 @@ const PORT = 3000
 const conn = mysql.createConnection({
     "host": "localhost",
     "user": "root", 
-    "password": "MYSQL",
+    "password": "***",
     "database": "marks"
 })
 conn.connect((err)=>{
